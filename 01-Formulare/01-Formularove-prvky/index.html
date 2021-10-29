@@ -22,6 +22,11 @@
 	-->
 
 
+	<form method="POST"  action="http://formular.itgirls.cz">
+
+
+	
+
 
 		<!--
 			INPUT
@@ -38,14 +43,20 @@
 			required  ... povinné pole, kontroluje prohlížeč při pokusu o odeslání
 		-->
 
+		<label for="jmeno">Křestní jméno</label>
+		<input type="text" name="jmeno" id="jmeno">
 
-
+		<hr>
 		<!--
 			LABEL - popisek formulářového pole
 			for: id formulářového prvku, pro který je toto popisek
 		-->
+		<label>
+			Příjmení
+			<input type="text" name="prijmeni" id="prijmeni">
+		</label>
 
-
+		<hr>
 
 		<!--
 			Tlačítko - lze vytvořit dvěma způsoby
@@ -69,43 +80,58 @@
 			value: text na tlačítku
 		-->
 
-
+		<button type="submit">Tlačítko</button>
+		<hr>
 
 		<!--
 			Další typy vstupních polí:
 			<input type="xxx">, kde "xxx" určuje typ pole
 		-->
+		<label for="cislo">Číslo</label>
+		<input type="number" name="cislo" id="cislo" min="10" max="1000000000">
+		<hr>
 
 		<!--
 			NUMBER - číslo
 			Další atributy: min, max, step
 		-->
-
+		<label for="email">E-mailová adresa</label>
+		<input type="email" name="email" id="email">
+		<hr>
 
 		<!--
 			EMAIL - emailová adresa
 			URL - webová adresa
 		-->
 
-
+		<label for="telefonni-cislo">Telefonní číslo</label>
+		<input type="tel" name="telefonni-cislo" id="telefonni-cislo">
+		<hr>
 		<!--
 			TEL - telefonní číslo
 			Občas se používá záměrně "nesprávně" pro zadávání čísel,
 			protože na mobilu většinou zobrazí klávesnici pouze s číslicemi 0-9.
 		-->
-
-
+		<label>
+			Datum
+			<input type="date" name="datum" id="datum">
+		</label>
+		<hr>
 		<!--
 			DATE - datum
 			DATETIME-LOCAL - datum a čas
 		-->
-
+		<label>
+			Heslo
+			<input type="password" name="heslo" id="heslo">
+		</label>
 
 		<!--
 			PASSWORD - heslo
 			zobrazuje hvězdičky místo textu
 		-->
-
+		<input type="text" hidden>
+		<hr>
 
 		<!--
 			HIDDEN - skryté pole
@@ -113,8 +139,11 @@
 			ale pole na stránce není vidět.
 		-->
 
+		<label for="policko">Velké pole</label>
+		<textarea name="policko" id="policko" cols="30" rows="10">Bagr
+Bagr</textarea>
 
-
+		<hr>
 
 		<!--
 			TEXTAREA - víceřádkové textové pole
@@ -125,7 +154,10 @@
 			maxlength: max. počet znaků, která jdou zadat
 		 -->
 
+		<input type="checkbox" name="checkbox" id="checkbox">
+		<label for="checkbox">Souhlasím s obchodními podmínkami</label>
 
+		 <hr>
 
 		<!--
 			CHECKBOX - zaškrtávácí políčko
@@ -137,6 +169,16 @@
 			disabled, required
 		-->
 
+		<input type="radio" name="ovoce" id="ovoce1" value="Jahoda">
+		<label for="ovoce1">Jahoda</label>
+
+		<input type="radio" name="ovoce" id="ovoce2" value="Hruška">
+		<label for="ovoce2">Hruška</label>
+
+		<input type="radio" name="ovoce" id="ovoce3" value="Borůvka">
+		<label for="ovoce3">Borůvka</label>
+
+		<hr>
 
 
 		<!--
@@ -155,7 +197,11 @@
 		-->
 
 
-
+		<select>
+			<option value="Praha" name="mesto" id="mesto1">Praha</option>
+			<option value="Brno" name="mesto" id="mesto2">Brno</option>
+			<option value="Plzeň" name="mesto" id="mesto3">Plzeň</option>
+		</select>
 
 
 		<!--
@@ -175,7 +221,7 @@
 		-->
 
 
-
+		
 
 		<!--
 			FIELDSET - seskupení polí formuláře
@@ -186,6 +232,6 @@
 
 
 
-
+	</form>
 </body>
 </html>

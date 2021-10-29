@@ -21,6 +21,46 @@
 		http://formular.itgirls.cz
 		... nebo ho napoj na některou z formulářových služeb na internetu.
 	-->
+	<h1 class="nadpis">Kontaktní formulář</h1>
 
+	<form action="http://formular.itgirls.cz" method="POST">
+		<div class="form-field">
+			<label for="celejmeno">Jméno a příjmení <span class="required">*</span></label>
+			<input type="text" name="celejmeno" id="celejmeno" required>
+		</div>
+
+		<div class="form-field">
+			<label for="email">E-mail <span class="required">*</span></label>
+			<input type="email" name="email" id="email" required>
+		</div>
+
+		<div class="form-field">
+			<label for="telefon">Telefon</label>
+			<input type="number" name="telefon" id="telefon">
+		</div>
+
+		<div class="form-field">
+			<label for="dotaz">Čeho se týká váš dotaz</label>
+			<select name="dotaz" id="dotaz">
+				<option value="prazdna"></option>
+				<option value="dotaz-na-produkt">Dotaz na produkt</option>
+				<option value="dotaz-na-objednavku">Dotaz na objednávku</option>
+				<option value="reklamace">Reklamace</option>
+			</select>
+		</div>
+
+		<div class="form-field">
+			<label for="zprava">Zpráva</label>
+			<textarea name="zprava" id="zprava" cols="30" rows="10"></textarea>
+		</div>
+
+		<div class="checkbox">
+			<input type="checkbox" name="zavolej-mi" id="zavolej-mi">
+			<label for="zavolej-mi">Zavolejte mi zpět</label>
+		</div>
+
+		<button class="tlacitko">Odeslat</button>
+
+	</form>
 </body>
 </html>
